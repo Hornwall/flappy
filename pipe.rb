@@ -4,9 +4,9 @@ class Pipe < DrawableEntity
 	def initialize(window, top, offset)
 		@gap_size = 80
 		if top
-			super(window, 1024, (0 - @gap_size) + offset, 0.0, Gosu::Image.new(window, "resources/images/pipe.jpg", false))
+			super(window, 1024, (-500 - @gap_size) + offset, 0.0, Gosu::Image.new(window, "resources/images/pipe.jpg", false))
 		else
-			super(window, 1024, 768-(384 - @gap_size) + offset, 0.0, Gosu::Image.new(window, "resources/images/pipe.jpg", false))	
+			super(window, 1024, (500 - @gap_size) + offset, 0.0, Gosu::Image.new(window, "resources/images/pipe.jpg", false))	
 		end
 		@velocity = -7
 	end

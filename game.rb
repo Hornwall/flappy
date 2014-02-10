@@ -13,15 +13,19 @@ class GameWindow < Gosu::Window
 	end
 
 	def update
-		@calle.update
-		@map_controler.update
-		if !calle.alive
-			@calle = null
+		if @calle
+			@calle.update
+			@map_controler.update
+			if !calle.alive
+				@calle = null
+			end
 		end
 	end
 
 	def draw
-		@calle.draw
+		if @calle
+			@calle.draw
+		end
 		@map_controler.draw
 	end
 

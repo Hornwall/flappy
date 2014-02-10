@@ -20,7 +20,7 @@ class MapControler < Entity
 	def spawn
 		@last_spawn = Time.now
 		prng = Random.new()
-		@pipes << PipePair.new(@window, prng.rand(-150..150))
+		@pipes << PipePair.new(@window, prng.rand(-300..300))
 	end
 
 	def draw
